@@ -7,14 +7,14 @@
 # SDK LIBRARY
 # -----------
 LIB_NAME = SENSIT_SDK_V2.0.0
-LIB_PATH = lib
+LIB_PATH = C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\sensit-sdk-v2.0.0\sdk\lib
 
 
 # --------------
 # OUTPUT FOLDERS
 # --------------
-BIN_PATH = bin
-OBJ_PATH = obj
+BIN_PATH = C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\sensit-sdk-v2.0.0\sdk\bin
+OBJ_PATH = C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\sensit-sdk-v2.0.0\sdk\obj
 
 
 # ------------
@@ -190,4 +190,4 @@ dir:
 
 # Rule for USB flashing using dfu file manager (vendor id 0483)
 prog:
-	dfu-util -a 0 -s 0x08000000:leave -D $(BIN_PATH)/$(BIN_OUTPUT)
+	C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\dfu-util-0.9-win64 -a 0 -s 0x08000000:leave -D $(BIN_PATH)/$(BIN_OUTPUT)
