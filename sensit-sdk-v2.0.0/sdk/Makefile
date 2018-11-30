@@ -7,14 +7,14 @@
 # SDK LIBRARY
 # -----------
 LIB_NAME = SENSIT_SDK_V2.0.0
-LIB_PATH = C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\sensit-sdk-v2.0.0\sdk\lib
+LIB_PATH = C:/Users/admin/Desktop/HEI4/ITI/ProgrammationEmbarquee/SigFoxTP/hei-2018-2019-lab-sens-it-cugnet-renaux/sensit-sdk-v2.0.0/sdk/lib
 
 
 # --------------
 # OUTPUT FOLDERS
 # --------------
-BIN_PATH = C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\sensit-sdk-v2.0.0\sdk\bin
-OBJ_PATH = C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\sensit-sdk-v2.0.0\sdk\obj
+BIN_PATH =C:/Users/admin/Desktop/HEI4/ITI/ProgrammationEmbarquee/SigFoxTP/hei-2018-2019-lab-sens-it-cugnet-renaux/sensit-sdk-v2.0.0/sdk/bin
+OBJ_PATH = C:/Users/admin/Desktop/HEI4/ITI/ProgrammationEmbarquee/SigFoxTP/hei-2018-2019-lab-sens-it-cugnet-renaux/sensit-sdk-v2.0.0/sdk/obj
 
 
 # ------------
@@ -48,10 +48,10 @@ CC_FLAGS = -DUSB
 # ---------------
 VPATH += \
 src \
-src/resources \
-src/sensors \
-src/radio \
-src/tools
+src\resources \
+src\sensors \
+src\radio \
+src\tools
 
 
 # ------------
@@ -71,7 +71,7 @@ ltr329.o \
 fxos8700.o \
 AT_parser.o \
 AT_functions.o \
-discovery.o
+discovery.o \
 
 OBJS = $(addprefix $(OBJ_PATH)/,$(OBJ_LIST))
 
@@ -105,44 +105,44 @@ $(OBJ_PATH)/%.o: %.c
 	@echo ' '
 
 main:
-	@echo 'Building file: $(OBJ_PATH)/main.o'
+	@echo 'Building file: $(OBJ_PATH)\main.o'
 	@echo 'Invoking: Cross ARM C Compiler'
-	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)/main.o src/main.c
+	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)\main.o src\main.c
 	@echo 'Finished building: $(OBJ_PATH)/main.o'
 	@echo ' '
 
 main_TEMPERATURE:
-	@echo 'Building file: $(OBJ_PATH)/main.o'
+	@echo 'Building file: $(OBJ_PATH)\main.o'
 	@echo 'Invoking: Cross ARM C Compiler'
-	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)/main.o src/main_TEMPERATURE.c
+	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)\main.o src\main_TEMPERATURE.c
 	@echo 'Finished building: $(OBJ_PATH)/main.o'
 	@echo ' '
 
 main_LIGHT:
-	@echo 'Building file: $(OBJ_PATH)/main.o'
+	@echo 'Building file: $(OBJ_PATH)\main.o'
 	@echo 'Invoking: Cross ARM C Compiler'
-	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)/main.o src/main_LIGHT.c
-	@echo 'Finished building: $(OBJ_PATH)/main.o'
+	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)\main.o src\main_LIGHT.c
+	@echo 'Finished building: $(OBJ_PATH)\main.o'
 	@echo ' '
 
 main_VIBRATION:
-	@echo 'Building file: $(OBJ_PATH)/main.o'
+	@echo 'Building file: $(OBJ_PATH)\main.o'
 	@echo 'Invoking: Cross ARM C Compiler'
-	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)/main.o src/main_VIBRATION.c
-	@echo 'Finished building: $(OBJ_PATH)/main.o'
+	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)\main.o src\main_VIBRATION.c
+	@echo 'Finished building: $(OBJ_PATH)\main.o'
 	@echo ' '
 
 main_MAGNET:
 	@echo 'Building file: $(OBJ_PATH)/main.o'
 	@echo 'Invoking: Cross ARM C Compiler'
-	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)/main.o src/main_MAGNET.c
-	@echo 'Finished building: $(OBJ_PATH)/main.o'
+	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)\main.o src\main_MAGNET.c
+	@echo 'Finished building: $(OBJ_PATH)\main.o'
 	@echo ' '
 
 main_MODEM:
 	@echo 'Building file: $(OBJ_PATH)/main.o'
 	@echo 'Invoking: Cross ARM C Compiler'
-	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)/main.o src/main_MODEM.c
+	$(CC) $(CC_OPT) $(CC_FLAGS) $(CC_INC) -c -o $(OBJ_PATH)\main.o src\main_MODEM.c
 	@echo 'Finished building: $(OBJ_PATH)/main.o'
 	@echo ' '
 
@@ -160,19 +160,19 @@ $(BIN_PATH)/$(ELF_OUTPUT):
 $(BIN_PATH)/$(BIN_OUTPUT):
 	@echo 'Building target: $(BIN_OUTPUT)'
 	@echo 'Invoking: Cross ARM GNU Create Flash Image'
-	$(BIN_TOOL) -O binary $(BIN_PATH)/$(ELF_OUTPUT) $@
+	$(BIN_TOOL) -O binary $(BIN_PATH)\$(ELF_OUTPUT) $@
 	@echo 'Finished building: $(BIN_OUTPUT)'
 	@echo ' '
 
 $(BIN_PATH)/$(SIZE_OUTPUT):
 	@echo 'Building target: $(SIZE_OUTPUT)'
 	@echo 'Invoking: Cross ARM GNU Print Size'
-	$(SIZE_TOOL) --format=berkeley "$(BIN_PATH)/$(ELF_OUTPUT)" > $@
+	$(SIZE_TOOL) --format=berkeley "$(BIN_PATH)\$(ELF_OUTPUT)" > $@
 	@cat $@
 	@echo 'Finished building: $(SIZE_OUTPUT)'
 	@echo ' '
 
-bin: $(BIN_PATH)/$(ELF_OUTPUT) $(BIN_PATH)/$(BIN_OUTPUT) $(BIN_PATH)/$(SIZE_OUTPUT)
+bin: $(BIN_PATH)\/(ELF_OUTPUT) $(BIN_PATH)/$(BIN_OUTPUT) $(BIN_PATH):$(SIZE_OUTPUT)
 
 
 # -------------
@@ -190,4 +190,4 @@ dir:
 
 # Rule for USB flashing using dfu file manager (vendor id 0483)
 prog:
-	C:\Users\Pierre Cugnet\Desktop\HEI\Cours\Informatique\ReseauUbiquitaire\hei-2018-2019-lab-sens-it-cugnet-renaux\dfu-util-0.9-win64 -a 0 -s 0x08000000:leave -D $(BIN_PATH)/$(BIN_OUTPUT)
+	C:\Users\admin\Desktop\HEI4\ITI\ProgrammationEmbarquee\SigFoxTP\hei-2018-2019-lab-sens-it-cugnet-renaux\dfu-util-0.9-win64 -a 0 -s 0x08000000:leave -D $(BIN_PATH)\$(BIN_OUTPUT)
